@@ -28,6 +28,11 @@ class BootStrap {
         Human human = new Human()
         human.scientificName = 'homo sapien'
         human.name = 'John Doe'
+        Address address = new Address()
+        address.city = 'Chicago'
+        address.country = 'United States of America'
+        address.save(flush:true, failOnError:true)
+        human.address = address
         human.save(flush:true, failOnError:true)
 
 
